@@ -12,6 +12,14 @@ recipe_list = [
         "image": "pasta-image.jpg",
         "description": "A mouthwatering pasta recipe.",
         "foodType": "Italian",
+        "ingredients": [
+            "Pasta",
+            "Tomato Sauce",
+            "Olive Oil",
+            "Garlic",
+            "Basil",
+            "Parmesan Cheese",
+        ],
     },
     {
         "id": 2,
@@ -19,6 +27,14 @@ recipe_list = [
         "image": "pizza-image.jpg",
         "description": "Create the perfect pizza at home.",
         "foodType": "Italian",
+        "ingredients": [
+            "Pizza Dough",
+            "Tomato Sauce",
+            "Mozzarella Cheese",
+            "Pepperoni",
+            "Bell Peppers",
+            "Onions",
+        ],
     },
     {
         "id": 3,
@@ -26,6 +42,14 @@ recipe_list = [
         "image": "taco-image.jpg",
         "description": "Spicy and savory tacos for dinner.",
         "foodType": "Mexican",
+        "ingredients": [
+            "Tortillas",
+            "Ground Beef",
+            "Taco Seasoning",
+            "Lettuce",
+            "Tomatoes",
+            "Sour Cream",
+        ],
     },
     {
         "id": 4,
@@ -33,6 +57,15 @@ recipe_list = [
         "image": "burger-image.jpg",
         "description": "Build your dream burger at home.",
         "foodType": "American",
+        "ingredients": [
+            "Burger Buns",
+            "Ground Beef",
+            "Lettuce",
+            "Tomatoes",
+            "Cheese",
+            "Ketchup",
+            "Mustard",
+        ],
     },
     {
         "id": 5,
@@ -40,6 +73,7 @@ recipe_list = [
         "image": "sushi-image.jpg",
         "description": "Savor the flavors of fresh sushi rolls.",
         "foodType": "Japanese",
+        "ingredients": ["Sushi Rice", "Nori Seaweed", "Fish", "Cucumber", "Avocado"],
     },
     {
         "id": 6,
@@ -47,6 +81,13 @@ recipe_list = [
         "image": "lasagna-image.jpg",
         "description": "Layers of pasta, meat, and cheese in a rich tomato sauce.",
         "foodType": "Italian",
+        "ingredients": [
+            "Lasagna Noodles",
+            "Ground Beef",
+            "Ricotta Cheese",
+            "Mozzarella Cheese",
+            "Tomato Sauce",
+        ],
     },
     {
         "id": 7,
@@ -54,6 +95,7 @@ recipe_list = [
         "image": "curry-image.jpg",
         "description": "A spicy and aromatic Thai dish with vegetables and chicken.",
         "foodType": "Thai",
+        "ingredients": ["Chicken", "Coconut Milk", "Green Curry Paste", "Vegetables"],
     },
     {
         "id": 8,
@@ -61,6 +103,7 @@ recipe_list = [
         "image": "salad-image.jpg",
         "description": "A refreshing salad with olives, feta cheese, and fresh vegetables.",
         "foodType": "Mediterranean",
+        "ingredients": ["Lettuce", "Olives", "Feta Cheese", "Cucumbers", "Tomatoes"],
     },
     {
         "id": 9,
@@ -68,6 +111,14 @@ recipe_list = [
         "image": "cake-image.jpg",
         "description": "Indulge in a rich and moist chocolate cake with chocolate frosting.",
         "foodType": "Dessert",
+        "ingredients": [
+            "Flour",
+            "Sugar",
+            "Cocoa Powder",
+            "Eggs",
+            "Butter",
+            "Chocolate",
+        ],
     },
     {
         "id": 10,
@@ -75,6 +126,13 @@ recipe_list = [
         "image": "alfredo-image.jpg",
         "description": "Creamy pasta with grilled chicken and parmesan cheese.",
         "foodType": "Italian",
+        "ingredients": [
+            "Fettuccine Pasta",
+            "Chicken",
+            "Cream",
+            "Parmesan Cheese",
+            "Garlic",
+        ],
     },
     {
         "id": 11,
@@ -82,6 +140,13 @@ recipe_list = [
         "image": "lasagna-image.jpg",
         "description": "Layers of pasta, meat, and cheese in a rich tomato sauce.",
         "foodType": "Italian",
+        "ingredients": [
+            "Lasagna Noodles",
+            "Ground Beef",
+            "Ricotta Cheese",
+            "Mozzarella Cheese",
+            "Tomato Sauce",
+        ],
     },
     {
         "id": 12,
@@ -89,6 +154,7 @@ recipe_list = [
         "image": "curry-image.jpg",
         "description": "A spicy and aromatic Thai dish with vegetables and chicken.",
         "foodType": "Thai",
+        "ingredients": ["Chicken", "Coconut Milk", "Green Curry Paste", "Vegetables"],
     },
     {
         "id": 13,
@@ -96,6 +162,7 @@ recipe_list = [
         "image": "salad-image.jpg",
         "description": "A refreshing salad with olives, feta cheese, and fresh vegetables.",
         "foodType": "Mediterranean",
+        "ingredients": ["Lettuce", "Olives", "Feta Cheese", "Cucumbers", "Tomatoes"],
     },
     {
         "id": 14,
@@ -103,6 +170,14 @@ recipe_list = [
         "image": "cake-image.jpg",
         "description": "Indulge in a rich and moist chocolate cake with chocolate frosting.",
         "foodType": "Dessert",
+        "ingredients": [
+            "Flour",
+            "Sugar",
+            "Cocoa Powder",
+            "Eggs",
+            "Butter",
+            "Chocolate",
+        ],
     },
     {
         "id": 15,
@@ -110,8 +185,16 @@ recipe_list = [
         "image": "alfredo-image.jpg",
         "description": "Creamy pasta with grilled chicken and parmesan cheese.",
         "foodType": "Italian",
-    }
+        "ingredients": [
+            "Fettuccine Pasta",
+            "Chicken",
+            "Cream",
+            "Parmesan Cheese",
+            "Garlic",
+        ],
+    },
 ]
+
 
 # Define a route to get all recipes
 @app.route('/api/recipes', methods=['GET'])
