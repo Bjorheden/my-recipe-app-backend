@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from flask_cors import CORS
 
 app = Flask(__name__)
@@ -199,6 +199,15 @@ recipe_list = [
 # Define a route to get all recipes
 @app.route('/api/recipes', methods=['GET'])
 def get_recipes():
+    search_query = request.args.get('search', default=None, type=str)
+
+    if search_query:
+        # Filter the recipes based on the search query
+        filtered_recipes = [recipe for recipe in recipe_list if search_query.lower() in recipe['title'].lower()]
+
+        return jsonify(filtered_recipes)
+    
+    # If no search query is provided, return all recipes
     return jsonify(recipe_list)
 
 @app.route('/api/recipes/<int:recipe_id>', methods=['GET'])
