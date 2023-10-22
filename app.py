@@ -45,5 +45,25 @@ def get_recipe(recipe_id):
 
     return jsonify({"message": "Recipe not found"}), 404
 
+@app.route('/api/recipes', methods=['POST'])
+def add_recipe():
+    # Get the request data from the frontend
+    recipe_data = request.get_json()
+
+    # Query the collection to get the count of documents
+    count = collection.count_documents({})
+
+    # Calculate the next custom _id
+    next_id = count + 1
+
+    # Add the custom _id to the recipe data
+    recipe_data["_id"] = next_id
+
+    # Insert the new recipe into the collection
+    collection.insert_one(recipe_data)
+
+    # Return the ID of the newly added recipe
+    return jsonify({"message": "Recipe added successfully"}), 201
+
 if __name__ == '__main__':
     app.run(debug=True)
